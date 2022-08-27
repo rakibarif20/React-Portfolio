@@ -1,0 +1,118 @@
+.home {
+  display: flex;
+  position: relative;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  &__text-wrapper {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+    h1 {
+      font-size: 8rem;
+      line-height: 10rem;
+      font-weight: 400;
+      margin: 0;
+      position: relative;
+      color: var(--selected-theme-main-color);
+      overflow: hidden;
+      white-space: nowrap;
+      animation: texteffect 3.3s infinite;
+    }
+    .contact-me {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      &__buttonsArea {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 24px;
+
+        @media (max-width: 768px) {
+          gap: 5px;
+          margin-bottom: 16px;
+        }
+        button,
+        a {
+          padding: 10px 70px;
+          cursor: pointer;
+          font-size: 2rem;
+          font-weight: 500;
+          background: transparent;
+          color: var(--selected-theme-main-color);
+          border: 1px solid var(--selected-theme-main-color);
+          text-decoration: none;
+          border-radius: 4px;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background: var(--selected-theme-main-color);
+            color: #000000;
+          }
+
+          @media (max-width: 768px) {
+            padding: 10px 40px;
+            font-size: 1.4rem;
+          }
+          @media (max-width: 425px) {
+            padding: 10px 20px;
+          }
+        }
+      }
+
+      &__social-icons {
+        display: flex;
+        gap: 16px;
+
+        @media (max-width: 768px) {
+          gap: 12px;
+        }
+        @media (max-width: 425px) {
+          gap: 8px;
+        }
+        svg {
+          cursor: pointer;
+          color: var(--selected-theme-main-color);
+
+          @media (max-width: 425px) {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes texteffect {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .home__text-wrapper h1 {
+    font-size: 3rem;
+    line-height: 5rem;
+  }
+}
+@media only screen and (min-width: 551px) and (max-width: 768px) {
+  .home__text-wrapper h1 {
+    font-size: 4rem;
+    line-height: 6rem;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .home__text-wrapper h1 {
+    font-size: 6rem;
+    line-height: 8rem;
+  }
+}

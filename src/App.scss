@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Roboto:wght@300;400;500&family=Tapestry&display=swap");
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+:root {
+  /* selected color */
+
+  --selected-theme-background-color: var(--yellow-theme-background-color);
+  --selected-theme-main-color: var(--yellow-theme-main-color);
+  --selected-theme-sub-text-color: var(--yellow-theme-sub-text-color);
+  --selected-theme-nav-background-color: var(--yellow-theme-nav-bacground-color);
+
+  /* primary color yellow */
+
+  --yellow-theme-background-color: #1d1d1d;
+  --yellow-theme-main-color: #ffdd40;
+  --yellow-theme-sub-text-color: #ffffff;
+  --yellow-theme-nav-bacground-color: #181818;
+
+  /* secondary color red */
+
+  --red-theme-background-color: #1d1d1d;
+  --red-theme-main-color: #e82a2a;
+  --red-theme-sub-text-color: #ffffff;
+  --red-theme-nav-bacground-color: #181818;
+
+  /* primary color green */
+
+  --green-theme-background-color: #1d1d1d;
+  --green-theme-main-color: #6ac045;
+  --green-theme-sub-text-color: #ffffff;
+  --green-theme-nav-bacground-color: #181818;
+
+  /* primary color blue */
+
+  --blue-theme-background-color: #1d1d1d;
+  --blue-theme-main-color: #5078ff;
+  --blue-theme-sub-text-color: #ffffff;
+  --blue-theme-nav-bacground-color: #181818;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  background: var(--selected-theme-background-color);
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.App {
+  width: 100%;
+  &___main-content-wrapper {
+    height: calc(100% - 80px);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Roboto", sans-serif;
+}
+
+p,
+span,
+a {
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
